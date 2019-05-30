@@ -10,11 +10,11 @@
 
 ### 1 ★☆	（重载函数） 
 
-已知声明 ` auto &&p = NULL; `\
+已知声明 ` auto &&p = nullptr; ` \
 若以下重载函数声明同时存在，则f(p)会调用的函数是？ \
 A. ` template<class T> void f(T *); ` \
-B. ` void f(int &&); ` \
-C. ` void f(nullptr_t &&); ` \
+B. ` void f(int); ` \
+C. ` void f(std::nullptr_t &&); ` \
 D. ` void f(void *); ` 
 
 ### 2 ★★	（变量的定义和初始化）

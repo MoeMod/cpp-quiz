@@ -105,7 +105,7 @@ D. VectorLength(float * v)
 
 ### 10 ★	（C++11综合）
 已知定义 ` int a,b,c,d; ` 下列语句能为a,b,c,d分别赋值0的是？ \
-A. [&](){a=b=c=d=0;}; \
-B. std::tie(a, b, c, d) = std::make_tuple(0, 0, 0, 0); \
-C. for(auto &x : {a,b,c,d}) { x=0; } \
-D. struct A { int &x; int &y; int &m; int &n; }; A {a, b, c, d} = { 0, 0, 0, 0 };
+A. ` [&](){a=b=c=d=0;}; ` \
+B. ` std::tie(a, b, c, d) = std::make_tuple(0, 0, 0, 0); ` \
+C. ` for(auto &x : {a,b,c,d}) { x=0; } ` \
+D. ` struct A { int &x; int &y; int &m; int &n; }; A {a, b, c, d} = { 0, 0, 0, 0 }; `

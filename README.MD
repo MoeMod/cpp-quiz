@@ -12,7 +12,7 @@
 
 已知声明 ` auto &&p = NULL; `\
 若以下重载函数声明同时存在，则f(p)会调用的函数是？ \
-A. void f(int); \
+A. template<class T> void f(T *); \
 B. void f(int &&); \
 C. void f(nullptr_t &&); \
 D. void f(void *); 
@@ -116,4 +116,3 @@ A. 派生类的大小 >= 其所有基类的大小之和 \
 B. 在C++中所有指针的大小都相等，且等于 ` sizeof(void *) ` \
 C. ` sizeof(bool) >= sizeof(char) ` \
 D. 联合体（union）的大小等于它所有的成员中占用空间最大的一个成员的大小
-

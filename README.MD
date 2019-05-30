@@ -5,9 +5,10 @@
 如有疑问请提ISSUE \
 欢迎大佬前来PULL REQUEST 
 
-## 警告：本题库~~难度较低~~不适合新手入门，请谨慎入坑。
+## 警告：本题库  ~~难度较低~~ 不适合新手入门，请谨慎入坑。 
 
-# 1 ★☆	（重载函数） 
+
+### 1 ★☆	（重载函数） 
 
 已知声明 ` auto &&p = NULL; `\
 若以下重载函数声明同时存在，则f(p)会调用的函数是？ \
@@ -16,18 +17,18 @@ B. void f(int &&); \
 C. void f(nullptr_t &&); \
 D. void f(void *); 
 
-# 2 ★★	（变量的定义和初始化）
-已知变量x的定义： \
+### 2 ★★	（变量的定义和初始化）
+已知变量x的定义： 
 ```
-static int x = (x+3)/2+1/2;
+static int x = (x+3)/2+1/2; 
 ```
-定义后x的值是？ \
+则定义后x的值是？ \
 A. 0 \
 B. 1 \
 C. 2 \
 D. 4 
 
-# 3 ★★☆	（auto与模板实参推导）
+### 3 ★★☆	（auto与模板实参推导）
 关于语句 
 ```
 auto &&x = std::max(0.5, 1);
@@ -38,7 +39,7 @@ B. x是将亡值 \
 C. 运行时x将会在语句结束后成为悬垂引用 \
 D. 这段代码会引发一个编译错误 
 
-# 4 ★	（左值、纯右值、将亡值的概念）
+### 4 ★	（左值、纯右值、将亡值的概念）
 已知定义
 ```
 int x;
@@ -51,12 +52,12 @@ B. y \
 C. f \
 D. f() 
 
-# 5 ★★	（未定义行为）
+### 5 ★★	（未定义行为）
 以下代码片段中哪个选项不会导致潜在的未定义行为？ \
-A. f(std::shared_ptr<int>(new int(1)), std::shared_ptr<int>(new int(2))); \
-B. std::vector<std::unique_ptr<std::string>> vec; \
-C. std::copy (std::vector<int>{ 1, 2, 3, 4, 5 }.begin(), std::vector<int>{ 1, 2, 3, 4, 5 }.end(), std::ostream_iterator<int>(std::cout)); \
-D. catch(std::auto_ptr<std::string> e) { cerr << *e <<endl; throw; } 
+A. ` f(std::shared_ptr<int>(new int(1)), std::shared_ptr<int>(new int(2)));  ` \
+B. ` std::vector<std::unique_ptr<std::string>> vec; ` \
+C. ` std::copy (std::vector<int>{ 1, 2, 3, 4, 5 }.begin(), std::vector<int>{ 1, 2, 3, 4, 5 }.end(), std::ostream_iterator<int>(std::cout)); ` \
+D. ` catch(std::auto_ptr<std::string> e) { cerr << *e <<endl; throw; } `
 # 6 ☆	（默认构造函数）
 以下哪个语句不能正确用默认构造函数创建对象（类型为T）？ \
 A. T a; \
@@ -64,7 +65,7 @@ B. auto b = T(); \
 C. T c{}; \
 D. T d(); 
 
-# 7 ☆	（std::map和范围for循环）
+### 7 ☆	（std::map和范围for循环）
 已知定义
 ```
 std::map<std::string, int> kv; 

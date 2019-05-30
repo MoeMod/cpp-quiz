@@ -114,6 +114,6 @@ D. ` struct A { int &x; int &y; int &m; int &n; }; A {a, b, c, d} = { 0, 0, 0, 0
 根据C++标准，下列关于sizeof（下称大小）的说法一定正确的是？ \
 A. 派生类的大小 >= 其所有基类的大小之和 \
 B. 在C++中所有指针的大小都相等，且等于 ` sizeof(void *) ` \
-C. ` sizeof sizeof 0 > 0 == sizeof ( sizeof 0 > 0 ) ` \
+C. ` sizeof(bool) >= sizeof(char) ` \
 D. 联合体（union）的大小等于它所有的成员中占用空间最大的一个成员的大小
 

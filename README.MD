@@ -65,7 +65,7 @@ B. auto b = T(); \
 C. T c{}; \
 D. T d(); 
 
-### 7 ☆	（std::map和范围for循环）
+### 7 ☆		（std::map和范围for循环）
 已知定义
 ```
 std::map<std::string, int> kv; 
@@ -79,3 +79,33 @@ A.	std::string \
 B.	int \
 C.	std::pair<std::string, int> \
 D.	std::pair<std::string, int>::iterator 
+
+### 8 ★☆	（命名空间和前置声明）
+```
+namespace X {
+    struct Y {
+        void foo(struct Z *);
+    };
+}
+```
+中前置声明的Z是？ \
+A. X::Y::foo::Z（foo的局部类） \
+B. X::Y::Z（Y的嵌套类） \
+C. X::Z（在X命名空间内和Y并列） \
+D. ::Z （在全局命名空间）
+
+### 9 ★★	（函数、数组、指针的const限定）
+假如已有别名 ` typedef float vec3_t[3]; ` \
+再定义函数 ` float VectorLength(const vec3_t v); ` \
+请问得到的函数签名是？ \
+A. VectorLength(const float *const v) \
+B. VectorLength(float * const v) \
+C. VectorLength(const float * v) \
+D. VectorLength(float * v)
+
+### 10 ★	（C++11综合）
+已知定义 ` int a,b,c,d; ` 下列语句能为a,b,c,d分别赋值0的是？ \
+A. [&](){a=b=c=d=0;}; \
+B. std::tie(a, b, c, d) = std::make_tuple(0, 0, 0, 0); \
+C. for(auto &x : {a,b,c,d}) { x=0; } \
+D. struct A { int &x; int &y; int &m; int &n; }; A {a, b, c, d} = { 0, 0, 0, 0 };

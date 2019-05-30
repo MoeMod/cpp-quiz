@@ -58,7 +58,7 @@ A. ` f(std::shared_ptr<int>(new int(1)), std::shared_ptr<int>(new int(2)));  ` \
 B. ` std::vector<std::unique_ptr<std::string>> vec; ` \
 C. ` std::copy (std::vector<int>{ 1, 2, 3, 4, 5 }.begin(), std::vector<int>{ 1, 2, 3, 4, 5 }.end(), std::ostream_iterator<int>(std::cout)); ` \
 D. ` catch(std::auto_ptr<std::string> e) { cerr << *e <<endl; throw; } `
-# 6 ☆	（默认构造函数）
+### 6 ☆	（默认构造函数）
 以下哪个语句不能正确用默认构造函数创建对象（类型为T）？ \
 A. T a; \
 B. auto b = T(); \

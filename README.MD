@@ -116,3 +116,10 @@ A. 派生类的大小 >= 其所有基类的大小之和 \
 B. 在C++中所有指针的大小都相等，且等于 ` sizeof(void *) ` \
 C. ` sizeof(bool) >= sizeof(char) ` \
 D. 联合体（union）的大小等于它所有的成员中占用空间最大的一个成员的大小
+
+### 12 ★☆	（指针和强制类型转换）
+以下关于C++中指针的说法正确的是？ \
+A. 内建指针类型都是整数类型，且 ` std::is_integral<void *>::value == true `  \
+B. 在C++中对内建指针进行（C风格）强制类型转换后，指针的值不变 \
+C. 假如p是某内建指针类型的变量（非void *），则 ` *p ` 一定是左值 \
+D. 已知声明 ` Base *p = new Derived; ` 若 ` dynamic_cast<Derived *>(p) ` 能通过编译则Derived和Base之间一定有继承关系

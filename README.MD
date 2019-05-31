@@ -64,7 +64,7 @@ B. auto b = T(); \
 C. T c{}; \
 D. T d(); 
 
-### 7 ☆		（std::map和范围for循环）
+### 7 ★		（std::map和范围for循环）
 已知定义
 ```
 std::map<std::string, int> kv; 
@@ -74,8 +74,8 @@ std::map<std::string, int> kv;
 for(auto x:kv){}
 ```
 中x的静态类型是？ \
-A.	std::string \
-B.	int \
+A.	std::pair<std::string const, int const> \
+B.	std::pair<std::string const, int> \
 C.	std::pair<std::string, int> \
 D.	std::pair<std::string, int>::iterator 
 
@@ -129,3 +129,10 @@ A. 不完整类型不可以作为函数返回值类型，但指向/绑定它的�
 B. 不完整类型可以作为模板实参，且指向/绑定它的指针或引用类型也可以 \
 C. 有作用域枚举声明 ` enum class Color : int; ` 中 Color 是不完整类型 \
 D. 所有被声明的不完整类型都可以通过再次给出定义从而变得完整
+
+### 14 ★（std::array的初始化） \
+在c++11中，以下哪种初始化是错误的？ \
+A. `std::array<int, 3> arr1d_1{  1, 2, 3 };` \
+B. `std::array<int, 3> arr1d_2{ { 1, 2, 3 } };` \
+C. `std::array<std::array<int, 3>, 3> arr2d_1{ { {1,2,3}, {1,2,3}, {1,2,3} } };` \
+D. `std::array<std::array<int, 3>, 3> arr2d_2{ {1,2,3}, {1,2,3}, {1,2,3} };`

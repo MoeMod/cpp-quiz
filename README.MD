@@ -8,14 +8,13 @@
 ## 警告：本题库  ~~难度较低~~ 不适合新手入门，请谨慎入坑。 
 
 
-### 1 ★☆	（重载函数） 
-
+### 1 ★★	（重载函数和右值引用） 
 已知声明 ` auto &&p = nullptr; ` \
 若以下重载函数声明同时存在，则f(p)会调用的函数是？ \
-A. ` template<class T> void f(T *); ` \
+A. ` void f(std::nullptr_t &&); ` \
 B. ` void f(int); ` \
-C. ` void f(std::nullptr_t &&); ` \
-D. ` void f(void *); ` 
+C. ` template<class T> void f(T *); ` \
+D. ` template<class T> void f(T &&); ` 
 
 ### 2 ★★	（变量的定义和初始化）
 已知变量x的定义： 

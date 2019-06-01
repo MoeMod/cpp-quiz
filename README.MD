@@ -143,3 +143,10 @@ D. `std::array<std::array<int, 3>, 3> arr2d_2{ {1,2,3}, {1,2,3}, {1,2,3} };`
 ```
 ("", std::string()) + ________ + (std::string(), "");
 ```
+
+### 16 ★★ （extern、static和链接性）
+假设全局作用域有以下a的声明/定义。请问哪个选项所声明/定义的a具有和其他选项不同的链接性？ \
+A. ` const int a = 0; ` \
+B. ` extern const int a = 0; ` \
+C. ` static const int a = 0; ` \
+D. ` extern "C++" { const int a = 0; } `

@@ -158,8 +158,8 @@ D. ` extern "C++" { const int a = 0; } `
 int main() 
 {
 	std::cout << 
-			std::is_class<std::string>::value || std::is_scalar<std::size_t>::value << 
-			std::is_pointer<std::nullptr_t>::value && std::is_function<std::less<>>::value << 
+			std::is_class<std::string>::value || std::is_function<std::less<>>::value << 
+			std::is_pointer<std::nullptr_t>::value && std::is_scalar<std::size_t>::value << 
 			'\n';
 }
 ```

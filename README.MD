@@ -150,3 +150,22 @@ A. ` const int a = 0; ` \
 B. ` extern const int a = 0; ` \
 C. ` static const int a = 0; ` \
 D. ` extern "C++" { const int a = 0; } `
+
+### 17 ★	（逻辑运算符和类型特征计算）
+```
+#include<iostream>
+#include<type_traits>
+int main() 
+{
+	std::cout << 
+			std::is_class<std::string>::value || std::is_scalar<std::size_t>::value << 
+			std::is_pointer<std::nullptr_t>::value && std::is_function<std::less<>>::value << 
+			'\n';
+}
+```
+请问该代码会得到什么输出结果？ \
+A. 0 \
+B. 1 \
+C. 10 \
+D. 11
+

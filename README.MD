@@ -169,3 +169,37 @@ B. 1 \
 C. 10 \
 D. 11
 
+### 18 ☆	（异常处理）
+```
+#include <iostream>
+#include <memory>
+
+int main()
+{
+	try {
+		throw nullptr;
+	}
+	catch(std::shared_ptr<void>){
+		return 0;
+	}
+	catch(void *) {
+		return 1;
+	}
+	catch(std::nullptr_t) {
+		return 2;
+	}
+	return 3;
+}
+```
+请问该代码会得到什么样的返回值（exit code）？\
+A. 0 \
+B. 1 \
+C. 2 \
+D. 3 
+
+### 19 ★☆	（static关键词）
+以下关于static关键词的说法正确的是？ \
+A. 若类Foo定义静态成员变量 ` static Foo instance; ` 则需要在某一编译单元中添加 ` static Foo Foo::instance; ` 类外定义以防止链接错误 \
+B. C++标准确保static局部变量一定会被初始化一次并且只会被初始化一次 \
+C. 未被声明为static的全局变量均拥有外部链接 \
+D. 若static局部变量被成功初始化，则它的析构函数会在程序退出时执行

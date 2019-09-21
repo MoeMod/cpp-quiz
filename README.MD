@@ -217,7 +217,7 @@ D. new表达式只会抛出std::bad_alloc异常
 ### 22 ★☆	（智能指针）
 以下关于shared_ptr的说法错误的是？\
 A. shared_ptr的拷贝构造和析构过程是线程安全的 \
-B. shared_ptr的赋值（` operator() `）和读取（` get() `）过程是线程安全的 \
+B. shared_ptr的赋值（` operator= `）和读取（` get() `）过程是线程安全的 \
 C. shared_ptr可以指向全局变量 \
 D. shared_ptr析构时所指向的类型T可以是不完整类型
 

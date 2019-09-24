@@ -227,3 +227,10 @@ A. 友元关系可以继承，但不可以传递 \
 B. 类模板中声明的友元函数是函数模板 \
 C. 通过友元声明首次定义的函数可以通过ADL查找进行引用 \
 D. 若`class X`先前是不完整类型，则可以使用 ` friend class X {}; ` 的形式提供X的定义
+
+### 24 ★☆	（引用的生命周期）
+以下哪一项不会产生悬垂指针/引用？ \
+A. `auto &&a = std::move(std::string("miao"));` \
+B. `auto &&b = std::forward<std::string>(std::string("miao"));` \
+C. `auto c = std::move(std::string("miao").c_str());` \
+D. `auto d = std::forward<std::string &&>(std::string("miao").c_str());`
